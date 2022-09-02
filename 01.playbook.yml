@@ -4,6 +4,8 @@
   connection: network_cli
   gather_facts: false
   hosts: all
+  vars:
+    ansible_network_os=ios
   tasks:
 
     - name: Get config for Ios devices
