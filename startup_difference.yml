@@ -1,7 +1,9 @@
 ---
 - hosts: cisco_ios
   gather_facts: true
-
+vars:    
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_network_os: cisco.ios.ios
   tasks:
   - name: check the startup-config against the running-config
     connection: network_cli
